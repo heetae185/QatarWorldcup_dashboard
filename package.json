@@ -1,7 +1,7 @@
 {
-  "name": "worldcup2022-dashboard",
+  "name": "tests222",
   "version": "1.0.0",
-  "description": "2022 qatar worldcup dashboard",
+  "description": "",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
