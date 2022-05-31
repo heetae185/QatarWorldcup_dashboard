@@ -1,0 +1,389 @@
+h1 {
+  color: #70193d;
+  text-align: center;
+}
+b {
+  text-align: center;
+}
+.All {
+  display: flex;
+}
+/*좌측 상단*/
+.left_up {
+  display: flex;
+  max-width: 30%;
+  width: 30%;
+  border: 5px solid #70193d;
+  margin: 20px;
+  padding: 20px;
+  max-height: fit-content;
+  height: fit-content;
+  position: absolute;
+  top: 0%;
+  border-radius: 20px;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.LeftTop1 {
+  display: flex;
+  flex-basis: 50%;
+  flex-direction: column;
+  align-content: space-around;
+  margin: 10px;
+}
+
+.flag {
+  flex-basis: 50%;
+  border: 3px solid #70193d;
+}
+
+#flag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.Rank {
+  flex-basis: 50%;
+  border: 3px solid #70193d;
+  text-align: center;
+  margin-top: 10px;
+}
+#Rank {
+  border-bottom: 2px solid #70193d;
+  text-align: center;
+  color: black;
+}
+
+.LeftTop2 {
+  display: flex;
+  flex-basis: 50%;
+  flex-direction: column;
+  align-content: space-around;
+  margin: 10px;
+}
+
+.Nat_name {
+  flex-basis: 50%;
+  border: 3px solid #70193d;
+}
+#Nat_name {
+  text-align: center;
+  color: black;
+}
+
+.Pred_rank {
+  flex-basis: 50%;
+  border: 3px solid #70193d;
+  text-align: center;
+  margin-top: 10px;
+}
+#Pred_rank {
+  border-bottom: 2px solid #70193d;
+  text-align: center;
+  color: black;
+}
+
+/*좌측 하단*/
+
+.btn_group {
+  display: block;
+  text-align: right;
+  margin-right: 89px;
+}
+.btn_name {
+  display: block;
+  text-align: right;
+}
+.left_down {
+  border: 5px solid #70193d;
+  margin: 20px;
+  padding: 20px;
+  max-width: 40%;
+  width: 35%;
+  max-height: fit-content;
+  height: fit-content;
+  position: absolute;
+  top: 60%;
+  border-radius: 20px;
+}
+
+#A_img1 {
+  width: 40%;
+  height: 25%;
+  border: 3px solid #70193d;
+}
+
+#A_img2 {
+  width: 90%;
+  height: 100%;
+  border: 3px solid #70193d;
+}
+
+#group1 {
+  border-bottom: 2px solid #70193d;
+}
+#group2 {
+  border-bottom: 2px solid #70193d;
+}
+#group3 {
+  border-bottom: 2px solid #70193d;
+}
+#group4 {
+  border-bottom: 2px solid #70193d;
+}
+#group5 {
+  border-bottom: 2px solid #70193d;
+}
+#group6 {
+  border-bottom: 2px solid #70193d;
+}
+#group7 {
+  border-bottom: 2px solid #70193d;
+}
+#group8 {
+  border-bottom: 2px solid #70193d;
+}
+.box1 {
+  border: 3px solid #70193d;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  max-width: 40%;
+  width: 40%;
+  float: left;
+}
+.box2 {
+  border: 3px solid #70193d;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  max-width: 40%;
+  width: 40%;
+  float: right;
+}
+.box3 {
+  border: 3px solid #70193d;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  max-width: 40%;
+  width: 40%;
+  float: left;
+}
+.box4 {
+  border: 3px solid #70193d;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  max-width: 40%;
+  width: 40%;
+  float: right;
+}
+.box5 {
+  border: 3px solid #70193d;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  max-width: 40%;
+  width: 40%;
+  float: left;
+}
+.box6 {
+  border: 3px solid #70193d;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  max-width: 40%;
+  width: 40%;
+  float: right;
+}
+.box7 {
+  border: 3px solid #70193d;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  max-width: 40%;
+  width: 40%;
+  float: left;
+}
+.box8 {
+  border: 3px solid #70193d;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  max-width: 40%;
+  width: 40%;
+  float: right;
+}
+
+/*우측 상단*/
+.right_up {
+  border: 5px solid #70193d;
+  margin: 20px;
+  padding: 20px;
+
+  max-width: 60%;
+  width: 60%;
+  position: absolute;
+  right: 0;
+  max-height: fit-content;
+  height: fit-content;
+  border-radius: 20px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+.rightUp1 {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  flex-direction: row;
+}
+.Nat_Info {
+  flex-direction: column;
+  align-items: stretch;
+  flex-basis: 19%;
+}
+.RF {
+  border: 3px solid aqua;
+  flex-basis: 19%;
+}
+#RF {
+  width: 100%;
+  height: 100%;
+}
+.divForChart1 {
+  border: 3px solid aqua;
+  flex-basis: 26%;
+}
+.divForChart2 {
+  border: 3px solid aqua;
+  flex-basis: 26%;
+}
+.divForChart3 {
+  border: 3px solid aqua;
+  flex-basis: 26%;
+}
+.Chart1 {
+  flex-basis: 26%;
+  align-items: stretch;
+  flex-direction: column;
+}
+.Chart2 {
+  flex-basis: 26%;
+  flex-direction: column;
+  align-items: stretch;
+}
+.Chart3 {
+  flex-basis: 26%;
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.rightUp2 {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+.Player1 {
+  display: flex;
+  align-content: space-between;
+  flex-direction: column;
+  border: 3px solid salmon;
+  flex-basis: 33.3%;
+}
+.Player1_info {
+  border: 3px solid gold;
+  flex-direction: row;
+  display: flex;
+}
+.Player1_img {
+  flex: auto;
+  border: 3px solid aqua;
+}
+.Player1_stat {
+  flex: auto;
+  border: 3px solid #70193d;
+}
+
+.Player2 {
+  display: flex;
+  align-content: space-between;
+  flex-direction: column;
+  border: 3px solid salmon;
+  flex-basis: 33.3%;
+}
+.Player2_info {
+  border: 3px solid gold;
+  flex-direction: row;
+  display: flex;
+}
+.Player2_img {
+  flex: auto;
+  border: 3px solid aqua;
+}
+.Player2_stat {
+  flex: auto;
+  border: 3px solid #70193d;
+}
+
+.Player3 {
+  display: flex;
+  align-content: space-between;
+  flex-direction: column;
+  border: 3px solid salmon;
+  flex-basis: 33.3%;
+}
+.Player3_info {
+  border: 3px solid gold;
+  flex-direction: row;
+  display: flex;
+}
+.Player3_img {
+  flex: auto;
+  border: 3px solid aqua;
+}
+.Player3_stat {
+  flex: auto;
+  border: 3px solid #70193d;
+}
+
+/*2개 국가*/
+
+/*과거 성적*/
+.Title {
+  display: block;
+}
+.Grade {
+  border: 5px solid #70193d;
+  margin: 20px;
+  padding: 20px;
+  max-width: 150%;
+  width: 145%;
+  max-height: 80%;
+  height: 40%;
+  position: absolute;
+  bottom: -55%;
+  left: 100%;
+  border-radius: 20px;
+}
+.Grade img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.Grade_img {
+  position: relative;
+  padding: 10px;
+  margin-top: 10px;
+  max-width: 100%;
+  width: 100%;
+  height: 70%;
+  float: left;
+}
