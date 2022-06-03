@@ -2,31 +2,362 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="theme-color" content="#000000">
-	<!--
-      manifest.json provides metadata used when your web app is added to the
-      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
-    -->
-	<link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-	<link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-	<!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DashBoard_Design</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type = "text/javascript" src = "https://d3js.org/d3.v4.min.js"></script>
 	<title>React App</title>
 </head>
 
 <body>
-	<noscript>
-		You need to enable JavaScript to run this app.
-	</noscript>
+  <div class="left_up">
+    <h1>국가 정보</h1>
+    <div class="flag">
+        <img id="flag" src="../src/imgs/Q.jpeg">
+    </div>
+    <div class="Nat_name">
+        <b><p id="Nat_name">카타르</p></b>
+    </div>
+    <div class="Rank">
+        <b>
+            <p id="Rank">FIFA RANK</p>
+            <p>NNth</p>
+        </b>
+    </div>
+    <div class="Pred_rank">
+        <b>
+            <p id="Pred_rank">Predicted RANK</p>
+            <p>NNth</p>
+        </b>
+    </div>
+</div>
+
+<div class="left_down">
+    <h1>선택국가비교</h1>
+    <div class="Btns">
+        <div id="btn_group">
+            <input name = "info" type="radio" checked="checked" >조별순</>
+            <input name = "info" type="radio">가나다순</>
+        </div>
+    </div>
+    <div class="box1">
+        <b><p id="group1">그룹 A</p></b>
+        <label for = "A1">
+          <input onclick="CountChecked(this)" type = "checkbox" id = "A1" name = "Group" style ="display:none"/>          
+          <img width="30px" src="../src/imgs/Q.jpeg"
+          <p>Qatar</p></label>
+        <label for = "A2">
+          <input onclick="CountChecked(this)" type = "checkbox" id = "A2" name = "Group" style ="display:none"/>          
+          <img width="30px" src="https://cdn.sofifa.net/flags/ec.png"
+          <p>Ecuador</p></label>
+        <label for = "A3">
+          <input onclick="CountChecked(this)" type = "checkbox" id = "A3" name = "Group" style ="display:none"/>          
+          <img width="30px" src="https://cdn.sofifa.net/flags/sn.png"
+          <p>Senegal</p></label>
+        <label for = "A4">
+          <input onclick="CountChecked(this)" type = "checkbox" id = "A4" name = "Group" style ="display:none"/>          
+          <img width="30px" src="https://cdn.sofifa.net/flags/nl.png"
+          <p>Netherlands</p></label>
+    </div>
+    <div class="box2">
+        <b><p id="group2">그룹 B</p></b>
+        <label for = "B1">
+            <input onclick="CountChecked(this)" type = "checkbox" id = "B1" name = "Group" style ="display:none"/>          
+            <img width="30px" src="https://cdn.sofifa.net/flags/gb-eng.png"
+            <p>England</p></label>
+          <label for = "B2">
+            <input onclick="CountChecked(this)" type = "checkbox" id = "B2" name = "Group" style ="display:none"/>          
+            <img width="30px" src="https://cdn.sofifa.net/flags/ir.png"
+            <p>Iran</p></label>
+          <label for = "B3">
+            <input onclick="CountChecked(this)" type = "checkbox" id = "B3" name = "Group" style ="display:none"/>          
+            <img width="30px" src="https://cdn.sofifa.net/flags/us.png"
+            <p>United states</p></label>
+          <label for = "B4">
+            <input onclick="CountChecked(this)" type = "checkbox" id = "B4" name = "Group" style ="display:none"/>          
+            <img width="30px" src="https://cdn.sofifa.net/flags/nl.png"
+            <p>unknown</p></label>
+    </div>
+    <div class="box3">
+        <b><p id="group3">그룹 C</p></b>
+        <label for = "C1">
+            <input onclick="CountChecked(this)" type = "checkbox" id = "C1" name = "Group" style ="display:none"/>          
+            <img width="30px" src="https://cdn.sofifa.net/flags/ar.png"
+            <p>Argentina</p></label>
+          <label for = "C2">
+            <input onclick="CountChecked(this)" type = "checkbox" id = "C2" name = "Group" style ="display:none"/>          
+            <img width="30px" src="https://cdn.sofifa.net/flags/sa.png"
+            <p>Saudi Arabia</p></label>
+          <label for = "C3">
+            <input onclick="CountChecked(this)" type = "checkbox" id = "C3" name = "Group" style ="display:none"/>          
+            <img width="30px" src="https://cdn.sofifa.net/flags/mx.png"
+            <p>Mexico</p></label>
+          <label for = "C4">
+            <input onclick="CountChecked(this)" type = "checkbox" id = "C4" name = "Group" style ="display:none"/>          
+            <img width="30px" src="https://cdn.sofifa.net/flags/pl.png"
+            <p>Poland</p></label>
+    </div>
+    <div class="box4">
+        <b><p id="group4">그룹 D</p></b>
+        <label for = "D1">
+            <input onclick="CountChecked(this)" type = "checkbox" id = "D1" name = "Group" style ="display:none"/>          
+            <img width="30px" src="https://cdn.sofifa.net/flags/fr.png"
+            <p>France</p></label>
+          <label for = "D2">
+            <input onclick="CountChecked(this)" type = "checkbox" id = "D2" name = "Group" style ="display:none"/>          
+            <img width="30px" src="https://cdn.sofifa.net/flags/ec.png"
+            <p>unknown</p></label>
+          <label for = "D3">
+            <input onclick="CountChecked(this)" type = "checkbox" id = "D3" name = "Group" style ="display:none"/>          
+            <img width="30px" src="https://cdn.sofifa.net/flags/dk.png"
+            <p></p>Denmark</label>
+          <label for = "D4">
+            <input onclick="CountChecked(this)" type = "checkbox" id = "D4" name = "Group" style ="display:none"/>          
+            <img width="30px" src="https://cdn.sofifa.net/flags/tn.png"
+            <p>Tunisia</p></label>
+    </div>
+    <div class="box5">
+        <b><p id="group5">그룹 E</p></b>
+        <label for = "E1">
+            <input onclick="CountChecked(this)" type = "checkbox" id = "E1" name = "Group" style ="display:none"/>          
+            <img width="30px" src="https://cdn.sofifa.net/flags/es.png"
+            <p>Spain</p></label>
+          <label for = "E2">
+            <input onclick="CountChecked(this)" type = "checkbox" id = "E2" name = "Group" style ="display:none"/>          
+            <img width="30px" src="https://cdn.sofifa.net/flags/ec.png"
+            <p>unknown</p></label>
+          <label for = "E3">
+            <input onclick="CountChecked(this)" type = "checkbox" id = "E3" name = "Group" style ="display:none"/>          
+            <img width="30px" src="https://cdn.sofifa.net/flags/de.png"
+            <p>Germany</p></label>
+          <label for = "E4">
+            <input onclick="CountChecked(this)" type = "checkbox" id = "E4" name = "Group" style ="display:none"/>          
+            <img width="30px" src="https://cdn.sofifa.net/flags/jp.png"
+            <p>Japan</p></label>
+    </div>
+    <div class="box6">
+        <b><p id="group6">그룹 F</p></b>
+        <label for = "F1">
+            <input onclick="CountChecked(this)" type = "checkbox" id = "F1" name = "Group" style ="display:none"/>          
+            <img width="30px" src="https://cdn.sofifa.net/flags/be.png"
+            <p>Belgium</p></label>
+          <label for = "F2">
+            <input onclick="CountChecked(this)" type = "checkbox" id = "F2" name = "Group" style ="display:none"/>          
+            <img width="30px" src="https://cdn.sofifa.net/flags/ca.png"
+            <p>Canada</p></label>
+          <label for = "F3">
+            <input onclick="CountChecked(this)" type = "checkbox" id = "F3" name = "Group" style ="display:none"/>          
+            <img width="30px" src="https://cdn.sofifa.net/flags/ma.png"
+            <p>Morocco</p></label>
+          <label for = "F4">
+            <input onclick="CountChecked(this)" type = "checkbox" id = "F4" name = "Group" style ="display:none"/>          
+            <img width="30px" src="https://cdn.sofifa.net/flags/hr.png"
+            <p>Croatia</p></label>
+    </div>
+    <div class="box7">
+        <b><p id="group7">그룹 G</p></b>
+        <label for = "G1">
+            <input onclick="CountChecked(this)" type = "checkbox" id = "G1" name = "Group" />          
+            <img width="30px" src="https://cdn.sofifa.net/flags/br.png"
+            <p>Brazil</p></label>
+          <label for = "G2">
+            <input onclick="CountChecked(this)" type = "checkbox" id = "G2" name = "Group"/>          
+            <img width="30px" src="https://cdn.sofifa.net/flags/rs.png"
+            <p>Serbia</p></label>
+          <label for = "G3">
+            <input onclick="CountChecked(this)" type = "checkbox" id = "G3" name = "Group" />          
+            <img width="30px" src="https://cdn.sofifa.net/flags/ch.png"
+            <p>Switzerland</p></label>
+          <label for = "G4">
+            <input onclick="CountChecked(this)" type = "checkbox" id = "G4" name = "Group" />          
+            <img width="30px" src="https://cdn.sofifa.net/flags/cm.png"
+            <p>Cameroon</p></label>
+    </div>
+    <div class="box8">
+        <b><p id="group8">그룹 H</p></b>
+        <label for = H1">
+            <input onclick="CountChecked(this)" type = "checkbox" id = "H1" name = "Group" style ="display:none"/>          
+            <img width="30px" src="https://cdn.sofifa.net/flags/pt.png"
+            <p>Portugal</p></label>
+          <label for = "H2">
+            <input onclick="CountChecked(this)" type = "checkbox" id = "H2" name = "Group" style ="display:none"/>          
+            <img width="30px" src="https://cdn.sofifa.net/flags/gh.png"
+            <p>Ghana</p></label>
+          <label for = "H3">
+            <input onclick="CountChecked(this)" type = "checkbox" id = "H3" name = "Group" style ="display:none"/>          
+            <img width="30px" src="https://cdn.sofifa.net/flags/uy.png"
+            <p>Uruguay</p></label>
+          <label for = "H4">
+            <input onclick="CountChecked(this)" type = "checkbox" id = "H4" name = "Group" style ="display:none"/>          
+            <img width="30px" src="https://cdn.sofifa.net/flags/kr.png"
+            <p>Korea Republic</p></label>
+    </div>
+
+
+    <div class="right_up">
+        <div class="Nat_Info">
+            <h2>카타르</h2>
+            <img id="RF" src="Q.jpeg"/>
+        </div>
+        <div class="Chart1">
+            <b><h2>공격</h2></b>
+            <img id="Chart1" src="chart.png"/>
+        </div>
+        <div class="Chart2">
+            <b><h2>미드필더</h2></b>
+            <img id="Chart2" src="chart.png"/>
+        </div>
+        <div class="Chart3">
+            <b><h2>수비</h2></b>
+            <img id="Chart3" src="chart.png"/>
+        </div>
+
+        <div class="Player1">
+            <div id="Player1_img">
+                <img id="Player1" src="player.jpeg"/>
+            </div>
+            <div id="Player1_stat">
+                <h3>이름</h3>
+                <h3>전력1</h3>
+                <h3>전력2</h3>
+                <h3>전력3</h3>
+            </div>
+        </div>
+        <div class="Player2">    
+            <div id="Player2_img">
+                <img id="Player2" src="player.jpeg"/>
+            </div>  
+            <div id="Player2_stat">
+                <h3>이름</h3>
+                <h3>전력1</h3>
+                <h3>전력2</h3>
+                <h3>전력3</h3>
+            </div> 
+        </div>
+        <div class="Player3">    
+            <div id="Player3_img">
+                <img id="Player3" src="player.jpeg"/>
+            </div>  
+            <div id="Player3_stat">
+                <h3>이름</h3>
+                <h3>전력1</h3>
+                <h3>전력2</h3>
+                <h3>전력3</h3>
+            </div>         
+        </div>
+
+        <div class="Player_Charts">
+            <img id="P_chart1" src="p_chart.png"/>
+            <img id="P_chart2" src="p_chart.png"/>
+            <img id="P_chart3" src="p_chart.png"/>
+        </div>
+    </div>
+    
+
+    <div class="right_up2">
+        <div class="Nat_Info">
+            <h2>카타르</h2>
+            <img id="RF" src="Q.jpeg"/>
+        </div>
+        <div class="Chart1">
+            <b><h2>공격</h2></b>
+            <img id="Chart1" src="chart.png"/>
+        </div>
+        <div class="Chart2">
+            <b><h2>미드필더</h2></b>
+            <img id="Chart2" src="chart.png"/>
+        </div>
+        <div class="Chart3">
+            <b><h2>수비</h2></b>
+            <img id="Chart3" src="chart.png"/>
+        </div>
+
+        <div class="Player1">
+            <div id="Player1_img">
+                <img id="Player1" src="player.jpeg"/>
+            </div>
+            <div id="Player1_stat">
+                <h3>이름</h3>
+                <h3>전력1</h3>
+                <h3>전력2</h3>
+                <h3>전력3</h3>
+            </div>
+        </div>
+        <div class="Player2">    
+            <div id="Player2_img">
+                <img id="Player2" src="player.jpeg"/>
+            </div>  
+            <div id="Player2_stat">
+                <h3>이름</h3>
+                <h3>전력1</h3>
+                <h3>전력2</h3>
+                <h3>전력3</h3>
+            </div> 
+        </div>
+        <div class="Player3">    
+            <div id="Player3_img">
+                <img id="Player3" src="player.jpeg"/>
+            </div>  
+            <div id="Player3_stat">
+                <h3>이름</h3>
+                <h3>전력1</h3>
+                <h3>전력2</h3>
+                <h3>전력3</h3>
+            </div>         
+        </div>
+
+        <div class="Player_Charts">
+            <img id="P_chart1" src="p_chart.png"/>
+            <img id="P_chart2" src="p_chart.png"/>
+            <img id="P_chart3" src="p_chart.png"/>
+        </div>
+    </div>
+    
+
+    <div class="Grade">
+        <div class="Title">
+            <button id="hideBtn" onclick="O()">1Nat</button>
+            <b><h1>과거 월드컵 순위</h1></b>
+        </div>
+        <div class="Grade_img">
+            <img src="grade.png"/>
+        </div>
+    </div>
+
+    
+  <script>
+    function CountChecked(field){
+      var maxCount = 2; // 카운트 최대값은 2
+      var count = 0; // 카운트, 0으로 초기화 설정
+      // field객체를 인자로 하는 CountChecked 함수 정의
+      if (field.checked) {
+      // 만약 field의 속성이 checked 라면(사용자가 클릭해서 체크상태가 된다면)
+        count += 1; // count 1 증가
+      } else {
+       // 아니라면 (field의 속성이 checked가 아니라면)
+        count -= 1; // count 1 감소
+      }
+
+      if (count > maxCount) {
+        // 만약 count 값이 maxCount 값보다 큰 경우라면
+        alert("최대 2개까지만 선택가능합니다!"); // alert 창을 띄움
+        field.checked = false; // (마지막 onclick한)field 객체의 checked를 false(checked가 아닌 상태)로 만든다.
+       count -= 1; // 이때 올라갔던 카운트를 취소처리해야 하므로 count를 1 감소시킨다.
+    }
+  }        
+</script>
+        
+
+<script>
+    function O(){
+        const R=document.querySelector('.right_up2');
+        const G=document.querySelector('.Grade');
+        R.style.display="none";
+        G.style.top='33%';
+    }
+</script>
 	<div id="root"></div>
 	<!--
       This HTML file is a template.

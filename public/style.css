@@ -1,0 +1,358 @@
+h1 {
+  color: #70193d;
+  text-align: center;
+}
+b {
+  text-align: center;
+}
+
+/*전력 바 차트*/
+svg #G1 rect {
+  fill: #eb5353;
+}
+svg text {
+  fill: white;
+  text-anchor: end;
+}
+svg #G1 {
+  margin-left: 2100px;
+}
+
+/*좌측 상단*/
+.left_up {
+  border: 5px solid #70193d;
+  margin: 20px;
+  padding: 20px;
+  max-width: 40%;
+  width: 35%;
+  max-height: 50%;
+  height: 50%;
+  position: absolute;
+  top: 0%;
+  border-radius: 20px;
+}
+
+.flag {
+  position: relative;
+  border: 3px solid #70193d;
+  padding: 10px;
+  margin-top: 10px;
+  max-width: 40%;
+  width: 40%;
+  height: 30%;
+  float: left;
+}
+#flag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.Nat_name {
+  border: 3px solid #70193d;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  max-width: 40%;
+  width: 40%;
+  height: 30%;
+  float: right;
+}
+.Rank {
+  border: 3px solid #70193d;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  max-width: 40%;
+  width: 40%;
+  height: 30%;
+  float: left;
+  clear: left;
+}
+#Rank {
+  border-bottom: 2px solid #70193d;
+}
+.Pred_rank {
+  border: 3px solid #70193d;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  max-width: 40%;
+  width: 40%;
+  height: 30%;
+  float: right;
+}
+#Pred_rank {
+  border-bottom: 2px solid #70193d;
+}
+
+/*좌측 하단*/
+
+#btn_group {
+  display: block;
+  text-align: right;
+  margin-right: 90px;
+}
+#btn_name {
+  display: block;
+  text-align: right;
+}
+.left_down {
+  border: 5px solid #70193d;
+  margin: 20px;
+  padding: 20px;
+  max-width: 40%;
+  width: 35%;
+  max-height: fit-content;
+  height: fit-content;
+  position: absolute;
+  top: 60%;
+  border-radius: 20px;
+}
+#group1 {
+  border-bottom: 2px solid #70193d;
+}
+#group2 {
+  border-bottom: 2px solid #70193d;
+}
+#group3 {
+  border-bottom: 2px solid #70193d;
+}
+#group4 {
+  border-bottom: 2px solid #70193d;
+}
+#group5 {
+  border-bottom: 2px solid #70193d;
+}
+#group6 {
+  border-bottom: 2px solid #70193d;
+}
+#group7 {
+  border-bottom: 2px solid #70193d;
+}
+#group8 {
+  border-bottom: 2px solid #70193d;
+}
+.box1 {
+  border: 3px solid #70193d;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  max-width: 40%;
+  width: 40%;
+  float: left;
+}
+.box2 {
+  border: 3px solid #70193d;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  max-width: 40%;
+  width: 40%;
+  float: right;
+}
+.box3 {
+  border: 3px solid #70193d;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  max-width: 40%;
+  width: 40%;
+  float: left;
+}
+.box4 {
+  border: 3px solid #70193d;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  max-width: 40%;
+  width: 40%;
+  float: right;
+}
+.box5 {
+  border: 3px solid #70193d;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  max-width: 40%;
+  width: 40%;
+  float: left;
+}
+.box6 {
+  border: 3px solid #70193d;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  max-width: 40%;
+  width: 40%;
+  float: right;
+}
+.box7 {
+  border: 3px solid #70193d;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  max-width: 40%;
+  width: 40%;
+  float: left;
+}
+.box8 {
+  border: 3px solid #70193d;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  max-width: 40%;
+  width: 40%;
+  float: right;
+}
+
+/*우측 상단*/
+.right_up {
+  border: 5px solid #70193d;
+  margin: 20px;
+  padding: 20px;
+  max-width: 150%;
+  width: 145%;
+  max-height: fit-content;
+  height: fit-content;
+  position: absolute;
+  top: -41%;
+  left: 100%;
+  border-radius: 20px;
+}
+.Nat_Info h2 {
+  left: 8%;
+  position: absolute;
+  color: #70193d;
+}
+#RF {
+  width: 20%;
+  float: left;
+  margin-top: 100px;
+}
+.Chart1 {
+  width: 20%;
+  float: left;
+  color: #70193d;
+  margin-left: 20px;
+}
+.Chart2 {
+  width: 20%;
+  float: left;
+  color: #70193d;
+  margin-left: 50px;
+}
+.Chart3 {
+  width: 20%;
+  float: left;
+  margin-left: 30px;
+  color: #70193d;
+}
+.Player1 {
+  float: left;
+  width: 30%;
+}
+#Player1_img {
+  float: left;
+  width: 70%;
+}
+#Player1_stat {
+  float: right;
+  width: 30%;
+}
+
+.Player2 {
+  float: left;
+  width: 30%;
+  margin-left: 50px;
+}
+#Player2_img {
+  float: left;
+  width: 70%;
+}
+#Player2_stat {
+  float: left;
+  width: 30%;
+}
+
+.Player3 {
+  float: right;
+  width: 30%;
+  margin-left: 30px;
+}
+#Player3_img {
+  float: left;
+  width: 70%;
+}
+#Player3_stat {
+  float: right;
+  width: 30%;
+}
+
+#P_chart1 {
+  float: left;
+  width: 30%;
+  margin: 10px;
+}
+#P_chart2 {
+  float: left;
+  width: 30%;
+  margin: 10px;
+}
+#P_chart3 {
+  float: left;
+  width: 30%;
+  margin: 10px;
+}
+
+.right_up2 {
+  border: 5px solid #70193d;
+  margin: 20px;
+  padding: 20px;
+  max-width: 150%;
+  width: 145%;
+  max-height: 80%;
+  height: 68%;
+  position: absolute;
+  top: 33%;
+  left: 100%;
+  border-radius: 20px;
+}
+/*2개 국가*/
+
+/*과거 성적*/
+.Title {
+  display: block;
+}
+.Grade {
+  border: 5px solid #70193d;
+  margin: 20px;
+  padding: 20px;
+  max-width: 150%;
+  width: 145%;
+  max-height: 80%;
+  height: 40%;
+  position: absolute;
+  bottom: -55%;
+  left: 100%;
+  border-radius: 20px;
+}
+.Grade img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.Grade_img {
+  position: relative;
+  padding: 10px;
+  margin-top: 10px;
+  max-width: 100%;
+  width: 100%;
+  height: 70%;
+  float: left;
+}
