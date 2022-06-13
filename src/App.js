@@ -572,11 +572,16 @@ function App(props) {
             </div>{/*div_right 첫번째 국가  -> 자동 선택되게 만들었습니다~*/}
 
         
-        <div className='grade'>
+        <div className='grade_overall'>
             {nations.length > 1?<>
-            <div className='gradeChart'>
-                <Graph compare={nations} />
-                <CompareChart nations={nations} mapping={nationMapping} data={overallMeanData} />
+            <div className='grade_overall_chart'>
+                <div className='overall'>
+                    <CompareChart nations={nations} mapping={nationMapping} data={overallMeanData} />
+                </div>
+                <div className='grade'>
+                    <Graph compare={nations} />
+                </div>
+                
             </div>
             </>:<></>}
 
