@@ -997,7 +997,7 @@ b{
   }
 
 /*과거 성적*/
-.grade{
+.grade_overall{
     /* border: 5px solid #70193D; */
     margin: 10px;
     margin-top: 5px;
@@ -1009,4 +1009,14 @@ b{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.grade_overall_chart{
+    display: flex;
+    flex-basis: 33.3%; 
+}
+.overall{
+    flex-basis: 40%;
+}
+.grade{
+    flex-basis: 60%;
 }
