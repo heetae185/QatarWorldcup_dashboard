@@ -1,0 +1,11 @@
+.top-flag {
+    display: flex;
+}
+
+.top-flag-nationality {
+    flex: 1;
+}
+
+.top-flag-info {
+    flex: 1;
+}
