@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import * as d3 from "d3";
+import { isValidDateValue } from "@testing-library/user-event/dist/utils";
 /*
 넘겨 받을 것
 data
@@ -21,7 +22,7 @@ function CompareChart(props) {
             width = 460 - margin.left - margin.right,
             height = 400 - margin.top - margin.bottom;
     const moveXaxis = 30;
-    const moveYaxis = 40;
+    const moveYaxis = 30;
     const moveYaxisT = height - moveYaxis;
     const moveYaxisS = - moveYaxis;
 
@@ -52,11 +53,7 @@ function CompareChart(props) {
     data[2].nation2 = value.d;
 
     useEffect(() => {
-        const svg = d3.select(svgRef.current)
-        .style('border', '4px #f2f2f2 solid')
-        // .style('border-radius', '20px')
-        .style('margin', '20px')
-        .style('padding', '10px');;
+        const svg = d3.select(svgRef.current);
 
         // Add X axis
         const xScale = d3.scaleBand()
@@ -71,7 +68,7 @@ function CompareChart(props) {
         const xAxis = d3.axisBottom(xScale).tickSize(0);
         svg.select(".x-axis")
             .style("transform", "translate(" + moveXaxis + "px, " + moveYaxisT +"px)")
-            .style("font", "18px times")
+            .style("font-size", "16px")
             .call(xAxis);
 
         // Add Y axis
@@ -96,18 +93,8 @@ function CompareChart(props) {
         // color palette = one color per subgroup
         const color = d3.scaleOrdinal()
         .domain(subgroups)
-        .range(['#70193D','#377eb8','#4daf4a'])
+        .range(['#e41a1c','#377eb8','#4daf4a'])
 
-        svg
-        .append("text")
-        .attr("class", "line_title")
-        .attr("font-weight", "bold")
-        .attr("x", width/2+10)
-        .attr("y", 10)
-        .attr("dy", "0.5em")
-        .style("text-anchor", "middle")
-        .text("오버롤 비교")
-        .attr("fill", "#70193D");
 
         // Show the bars
         svg.append("g")
@@ -115,7 +102,6 @@ function CompareChart(props) {
         // Enter in data = loop group per group
         .data(data)
         .join("g")
-        .style('font', '18px times')
         .attr("transform", d => `translate(${xScale(d.group)}, 0)`)
         .selectAll("rect")
         .data(function(d) { return subgroups.map(function(key) { return {key: key, value: d[key]}; }); })
@@ -124,8 +110,60 @@ function CompareChart(props) {
         .attr("y", d => yScale(d.value) - moveYaxis)
         .attr("width", xSubgroup.bandwidth())
         .attr("height", d => height - yScale(d.value))
-        .attr("fill", d => color(d.key));
+        .attr("fill", d => color(d.key))
+        .on("mouseover", mouseover)
+        .on("mouseout", mouseout)
+        ;
 
+
+
+        function mouseover(e, v) {
+            svg.selectAll('rect')
+                // .attr("fill", "#e41a1c")
+                .attr("opacity", 0.3)
+            // d3.select(this).attr("fill", "#50001D");
+            d3.select(this).attr("opacity", "1")
+            tooltip.style("visibility", "visible")
+                // .attr("opacity", 1)
+                .text(v.value)
+                // .attr("x",  e.screenX - e.offsetX + moveXaxis + 100)
+                // .attr("x", e.target.x.animVal.value + 30)
+                // .attr("y", e.target.y.animVal.value)
+                .attr("x", e.x + 35 - 700)
+                .attr("y", 60)
+                console.log(e.target.x.animVal.value)
+                console.log(e.target.y.animVal.value)
+                console.log(e.x)
+                console.log(e.y)
+                console.log(e)
+                // console.log(v)
+                // console.log(v)
+                // console.log(e.target.x.animVal.value)
+                // console.log(e.offsetX)
+                // console.log(e.offsetY)
+            // svg.selectAll("text").attr("font-weight", "bold")
+        }
+        function mouseout(e) {
+            svg.selectAll('rect')
+                // .attr("fill", "#70193D")
+                .attr("opacity", "1")
+            d3.select(this).attr("opacity", "1");
+            tooltip.style("visibility", "hidden")
+                // .text("dsfdfdsfdsdf")
+        }
+
+        let tooltip = svg
+        .append("text")
+        .attr("class", "tool-tip")
+        .style("position", "absolute")
+        .style("border-radius", "4px 4px 4px 4px")
+        .style("background-color", "#E2E2E2")
+        .style("visibility", "hidden")
+        .style("font-size", "16px")
+        .style("text-anchor", "middle")
+        .style("margin", "24px")
+        .attr("class", "tooltip")
+        // .style("fill", "white")
     }, []);
 
     return (

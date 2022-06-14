@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 // import './top-flag.css'
 
 function TopFlag(props) {
-    console.log(props)
+    // console.log(props)
     if (props.data == null || props.data.length == 0 ) return <></>;
     if (props.mapping == null || props.mapping.length == 0 ) return <></>;
     if (props.ranking == null || props.ranking.length == 0 ) return <></>;
