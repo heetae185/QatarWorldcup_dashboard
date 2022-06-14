@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import './top-flag.css'
+// import './top-flag.css'
 
 function TopFlag(props) {
     console.log(props)
@@ -34,17 +34,15 @@ function TopFlag(props) {
 
     return(
         <>
-        <div className="top-flag" display="flex">
-            <div className="top-flag-nationality" flex="1">
-                <p>{nationality_name}</p>
+            <div className="top-flag-nationality">
+                <h2>{nationality_name}</h2>
                 <img width="100px" src = {url} />
             </div>
             
-            <div className="top-flag-info" flex="1">
-                <h1>피파랭킹: {fifa_rank}</h1>
-                <h1>예상순위: {pred_rank}</h1>
-                <h1>오 버 롤: {overall_mean} </h1>
-            </div>
+            <div className="top-flag-info" >
+                <h2>피파랭킹: {fifa_rank}</h2>
+                <h2>예상순위: {pred_rank}</h2>
+                <h2>오 버 롤: {overall_mean} </h2>
             
         </div>
         </>

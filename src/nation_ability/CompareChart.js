@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import * as d3 from "d3";
-import { isValidDateValue } from "@testing-library/user-event/dist/utils";
 /*
 넘겨 받을 것
 data
