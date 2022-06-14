@@ -37,46 +37,26 @@ function TopPlayerInfo(props) {
 
     return (
         <div className="nation-ability-top-player-info">
-            {/* <div className="nation-ability-top-player-info-detail">
-                <img src={flagUrl}></img>
-                <div className="nation-ability-top-player-info-detail-left">
-                    <p>{props.mapping[props.mapping.map((v, i, s) =>v.nationality_name == props.nationality_name).indexOf(true)].value}</p>
-                </div>
-                <div className="nation-ability-top-player-info-detail-right">
-                    <p>{club_name}</p>
-                </div>
-            </div> */}
             <img width={"100px"} src={faceUrl}></img>
-            <div className="nation-ability-top-player-info-detail">
-                <div className="nation-ability-top-player-info-detail-left">
-                    <p>{short_name}</p>
-                </div>
-                <div className="nation-ability-top-player-info-detail-right">
-                    <p>{age}</p>
-                </div>
+            <div className="nation-ability-top-player-info-detailName">
+                <p>{short_name}</p>
             </div>
             <div className="nation-ability-top-player-info-detail">
-                <div className="nation-ability-top-player-info-detail-left">
-                    <p>{position}</p>
+                <div className="nation-ability-top-player-info-detail1">
+                    <div className="nation-ability-top-player-info-detail-left">
+                        <p>나이:{age}</p>
+                    </div>
+                    <div className="nation-ability-top-player-info-detail-right">
+                        <p>포지션:{position}</p>
+                    </div>
                 </div>
-                <div className="nation-ability-top-player-info-detail-right">
-                    <p>{height}</p>
-                </div>
-            </div>
-            <div className="nation-ability-top-player-info-detail">
-                <div className="nation-ability-top-player-info-detail-left">
-                    <p>{weight}</p>
-                </div>
-                <div className="nation-ability-top-player-info-detail-right">
-                    <p>{preferred_foot}</p>
-                </div>
-            </div>
-            <div className="nation-ability-top-player-info-detail">
-                <div className="nation-ability-top-player-info-detail-left">
-                    <p>{"".concat(parseInt(value_eur / 1000), "K")}</p>
-                </div>
-                <div className="nation-ability-top-player-info-detail-right">
-                    <p>{"".concat(parseInt(wage_eur / 1000), "K")}</p>
+                <div className="nation-ability-top-player-info-detail2">
+                    <div className="nation-ability-top-player-info-detail-left">
+                        <p>키:{height}cm</p>
+                    </div>
+                    <div className="nation-ability-top-player-info-detail-right">
+                        <p>몸무게:{weight}</p>
+                    </div>
                 </div>
             </div>
         </div>

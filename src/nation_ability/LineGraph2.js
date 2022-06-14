@@ -80,10 +80,10 @@ function Graph(props){
 
   useEffect(() => {
     const svg = d3.select(svgRef.current)
-    .style('border', '4px #f2f2f2 solid')
+    // .style('border', '4px #70193D solid')
     // .style('border-radius', '20px')
-    .style('margin', '20px')
-    .style('padding', '10px');
+    // .style('margin', '20px')
+    // .style('padding', '10px');
 
     svg                           //기존에 있던 제목과 가로축 세로축 중복 제거
     .selectAll(".line_dot")
@@ -118,7 +118,7 @@ function Graph(props){
     .remove();
 
     if(props.compare.length > 1){
-      single_color = "#FF7F50";
+      single_color = "#193d70";
     }
     else single_color = "#70193D";
     const xScale = d3.scaleLinear().domain([0,data.length-1]).range([start_hori,graph_hori]);
