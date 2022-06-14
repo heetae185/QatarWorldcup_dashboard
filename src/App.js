@@ -136,7 +136,7 @@ function App(props) {
             const yScale =d3
             .scaleBand()                               // 단순 용도인듯.
             .domain(abilitys.map((v) => v.ability_name)) // map은 순서를 알려주는 것 같음.
-            .range([0, 250])                    
+            .range([0, 370])                    
             .padding(0.45);                             // 막대그래프 굵기 조걸
     
             const yAxis = d3
@@ -175,9 +175,6 @@ function App(props) {
             }
 
 
-
-
-
             // svg.selectAll("nation-chart-text")
             // .data(data)                                         // data연결
             // .enter().append("text")
@@ -189,9 +186,13 @@ function App(props) {
         }, []);
     
         return (
-            <svg ref ={svgRef} height="380px" width="500px" >
-                <g className="y-axis"></g>
-            </svg>
+            <>
+                <div className='div_right_top_bar'>
+                    <svg ref ={svgRef} height="500px" width="630px"  viewBox='0 0 390 400' >
+                        <g className="y-axis"></g>
+                    </svg>
+                </div>
+            </>
     )
     }
 
@@ -465,13 +466,11 @@ function App(props) {
             <div className='div_right'>
             {nations.length > 0 ? <>
                 <div className="div_right_top">
-                    <div className='Div_NationAbilityFlag'>
                         <TopFlag nationality_name={nations[0]} data={dataset} mapping={nationMapping} ranking={fifaRankData} overall_mean={overallMeanData}/>
-                    </div>
-                    <div className="div_right_top_right">
+                    {/* <div className="div_right_top_right"> */}
                         {/* <NationAbilityTopChart nation_index={0} /> */}
                         <NationAbilityTopChart nation_index={0} />
-                    </div>
+                    {/* </div> */}
                 </div>
             
             <div className="div_right_bottom">
@@ -520,12 +519,8 @@ function App(props) {
             {nations.length > 1?
             <>
             <div className="div_right_top">
-                <div className='Div_NationAbilityFlag'>
                     <TopFlag nationality_name={nations[1]} data={dataset} mapping={nationMapping} ranking={fifaRankData} overall_mean={overallMeanData}/>
-                </div>
-                <div className="div_right_top_right">
                     <NationAbilityTopChart nation_index={1} />
-                </div>
             </div>
             <div className="div_right_bottom">
                 <div className="div_right_bottom_split">
@@ -572,7 +567,7 @@ function App(props) {
             </div>{/*div_right 첫번째 국가  -> 자동 선택되게 만들었습니다~*/}
 
         
-        <div className='grade_overall'>
+            <div className='grade_overall'>
             {nations.length > 1?<>
             <div className='grade_overall_chart'>
                 <div className='overall'>

@@ -49,7 +49,7 @@ function TopPlayerInfo(props) {
             <img width={"100px"} src={faceUrl}></img>
             <div className="nation-ability-top-player-info-detail">
                 <div className="nation-ability-top-player-info-detail-left">
-                    <p >{short_name}</p>
+                    <p>{short_name}</p>
                 </div>
                 <div className="nation-ability-top-player-info-detail-right">
                     <p>{age}</p>
@@ -71,14 +71,14 @@ function TopPlayerInfo(props) {
                     <p>{preferred_foot}</p>
                 </div>
             </div>
-            {/* <div className="nation-ability-top-player-info-detail">
+            <div className="nation-ability-top-player-info-detail">
                 <div className="nation-ability-top-player-info-detail-left">
                     <p>{"".concat(parseInt(value_eur / 1000), "K")}</p>
                 </div>
                 <div className="nation-ability-top-player-info-detail-right">
                     <p>{"".concat(parseInt(wage_eur / 1000), "K")}</p>
                 </div>
-            </div> */}
+            </div>
         </div>
     )
 }
