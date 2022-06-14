@@ -24,11 +24,14 @@ import TopPlayerRadar from "./nation-ability/TopPlayerRadar";
 import NationInfo from "./nation-ability/NationInfo";
 import Wrapper from './Wrapper'
 import TopFlag from "./nation-ability/TopFlag";
+// import TopChart from "./nation-ability/TopChart";
+
 import TopPlayerInfo from "./nation-ability/TopPlayerInfo"
 import CompareChart from "./nation-ability/CompareChart"
 
 
 import Graph from "./nation-ability/LineGraph2";
+import { color } from 'd3';
 
 
 let nationMapping = null;
@@ -94,44 +97,88 @@ function App(props) {
     const onClickNations = ((e) => {
     // 1. 중복확인
     if (nations.indexOf(e) >= 0) {
+        for(let j = 0; j < nations.length;j ++) {
+            let selectNation = nationMapping[nationMapping.map((v, i, s) => v.nationality_name == e).indexOf(true)].value
+            let index = nationMapping.map((v, i, s) => v.nationality_name == e).indexOf(true)
+            let btn = document.getElementsByName("Group")[index].parentElement
+            btn.style.border = ""
+            btn.style.borderRadius = ""
+        }
+
+        const leftNation = [...nations.filter((v) => v != e)]
         setNations([...nations.filter((v) => v != e)])
+
+        if(leftNation.length > 0) {
+            console.log(nations)
+            let selectNation = nationMapping[nationMapping.map((v, i, s) => v.nationality_name == leftNation[0]).indexOf(true)].value
+            console.log(selectNation)
+            let index = nationMapping.map((v, i, s) => v.nationality_name == leftNation[0]).indexOf(true)
+            let btn = document.getElementsByName("Group")[index].parentElement
+            btn.style.border = "4px solid #701936"
+            btn.style.borderRadius = "10%"
+
+            console.log(nations.length)
+        }
+
     }
     // 2. 길이확인
     else if (nations.length < 2 ){
         setNations([...nations, e])
+
+        const selectNation = nationMapping[nationMapping.map((v, i, s) => v.nationality_name == e).indexOf(true)].value
+        const index = nationMapping.map((v, i, s) => v.nationality_name == e).indexOf(true)
+        // console.log(selectNation)
+        // console.log(index)
+        // console.log(document.getElementsByName("Group")[index].parentElement)
+        let btn = document.getElementsByName("Group")[index].parentElement
+        if(nations.length == 0) {
+            btn.style.border = "4px solid #701936"  // first
+            btn.style.borderRadius = "10%"
+        } else {
+            btn.style.border = "4px solid #E69722"  // second
+            btn.style.borderRadius = "10%"
+        }
+        
     }
     });
 
-    function NationAbilityTopChart(props) {
-        // console.log(dataset.length);
-        if ((dataset.length <= 0 || nations.length < props.nation_index)) {
-            
-            return (
-                <></>
-            )
-        }
-        const svgRef = useRef(null);
+    function TopChart(props) {
+        // console.log(props)
+        // console.log(props.data)
+        // props.data 접근하면 react애러뜸 못고침 ㅅㄱ
+        if (props.data == null ) return <></>;
+        if (props.data.length == 0 ) return <></>;
+    
         let abilitys = [];
-
-        const moveXaxis = 80;
-        const data = dataset.filter((v) => v.nationality_name == nations[0]);
+        const svgRef = useRef(null);
+    
+        const moveXaxis = 20    ;
+        const data = props.data.filter((v) => v.nationality_name == props.nationality_name)
+                                .filter((v) => parseInt(v.pace) != 0);
+                                
         if (data.length == 0) {return (<></>)}
         
-        for(let i = 0; i < 10; i++) {
-            let newAbility = {};
-            newAbility.ability_name = Object.keys(data[0])[i + 37];
-            newAbility.ability_value = data[0][newAbility.ability_name];
+        for(let i = 0; i < 6; i++) {
+            let newAbility = {ability_name: "", ability_value: 0};
+            newAbility.ability_name = Object.keys(data[i])[i + 37];
+            for(let j = 0; j < 10; j++) {
+                newAbility.ability_value = parseInt(newAbility.ability_value) + parseInt(data[i][newAbility.ability_name]);
+                
+            }
+            // console.log(newAbility.ability_value)
+            newAbility.ability_value = parseInt(newAbility.ability_value / 10)
             abilitys[abilitys.length] = newAbility;
         }
-            
-        // console.log(abilitys.map((v, i) => i))
+    
         useEffect(() => {
             const svg = d3.select(svgRef.current);
+    
+    
     
             const xScale = d3
             .scaleLinear()
             .domain([0, 100])
-            .range([0, 400])
+            .range([0, 350])
     
             const yScale =d3
             .scaleBand()                               // 단순 용도인듯.
@@ -147,51 +194,86 @@ function App(props) {
                 .style("transform", "translateX(" + moveXaxis + "px)")
                 // .style("font", "20px times")
                 .call(yAxis);            // 폰트 크기 조절
-
+            
+                // console.log(abilitys)
             svg.selectAll("bar")
             .data(abilitys)
             .join("rect")  
             .attr("class", "nation-chart-bar")                   // 속석은 바차트
-
-            .attr("x", (v) => moveXaxis)                       // barchart의 기준 x값
+    
+            .attr("x", (v) => moveXaxis + 1)                       // barchart의 기준 x값
             .attr("y", (v) => yScale(v.ability_name))             // barchart의 기준 y값
-
-            .attr("width", v => xScale(v.ability_value))    // 바의 너비 조절
+    
+            .attr("width", v => xScale(v.ability_value) + moveXaxis)    // 바의 너비 조절
             .attr("height", v => yScale.bandwidth())     // 바의 높이 조절
-            // .attr("fill", "#70193D")                // 바차트 내부 채우기
-            .attr("fill", "orange")                 // 바차트 내부 채우기
-
-
+            .attr("fill", "#70193D")                // 바차트 내부 채우기
+    
             .on("mouseover", mouseover)
             .on("mouseout", mouseout)
-
-
-            function mouseover(d) {
-                d3.select(this).attr("fill", "#000000");
-                // console.log(d)
+            // .on("mousemove", mousemove)
+    
+    
+            function mousemove(e) {
+                tooltip .attr("x",  e.offsetX +30)
+                .attr("y", e.offsetY + 30)
             }
-            function mouseout(d) {
+    
+            function mouseover(e, v) {
+                svg.selectAll('rect')
+                    .attr("fill", "#F5DBDB")
+                    // .attr("opacity", "0.5")
+                d3.select(this).attr("fill", "#50001D");
+                tooltip.style("visibility", "visible")
+                    // .attr("opacity", "0")
+                    .text(v.ability_value)
+                    // .attr("x",  e.screenX - e.offsetX + moveXaxis + 100)
+                    .attr("x",  e.target.width.animVal.value + moveXaxis - 20)
+                    .attr("y", e.target.y.animVal.value  + 17)
+                    // console.log(e.target)
+                    // console.log(e.target.x.animVal.value)
+                    // console.log(e.offsetX)
+                    // console.log(e.offsetY)
+                // svg.selectAll("text").attr("font-weight", "bold")
+            }
+            function mouseout(e) {
+                svg.selectAll('rect')
+                    .attr("fill", "#70193D")
+                    // .attr("opacity", "1")
                 d3.select(this).attr("fill", "#70193D");
+                tooltip.style("visibility", "hidden")
+                    // .text("dsfdfdsfdsdf")
             }
-
-
+    
+            let tooltip = svg
+            .append("text")
+            .attr("class", "tool-tip")
+            .style("position", "absolute")
+            .style("border-radius", "4px 4px 4px 4px")
+            .style("background-color", "#E2E2E2")
+            .style("visibility", "hidden")
+            .style("font-size", "16px")
+            .style("text-anchor", "middle")
+            .style("margin", "30px")
+            .attr("class", "tooltip")
+            .style("fill", "white")
+    
             // svg.selectAll("nation-chart-text")
-            // .data(data)                                         // data연결
+            // .data(abilitys)                                         // data연결
             // .enter().append("text")
             //     .attr("class", "nation-chart-text")
             //     .attr("text-anchor", "middle")                  // 중앙 정렬
-            //     .attr("x", (d) => d.ability_value  + moveXaxis + 20)              // x위치
-            //     .attr("y", (d) => yScale(d.ability_name) +12)   // y위치
+            //     .attr("x", (d) => xScale(d.ability_value)  + moveXaxis + 100)              // x위치
+            //     .attr("y", (d) => yScale(d.ability_name) +15)   // y위치
             //     .text((d) => d.ability_value);                  // 실제 text값
         }, []);
     
         return (
             <>
-                <div className='div_right_top_bar'>
+                {/* <div className='div_right_top_bar'> */}
                     <svg ref ={svgRef} height="500px" width="630px"  viewBox='0 0 390 400' >
                         <g className="y-axis"></g>
                     </svg>
-                </div>
+                {/* </div> */}
             </>
     )
     }
@@ -263,9 +345,9 @@ function App(props) {
                             </button>
                         </div>
                         <div className='group_infoB4'> 
-                        <button onClick={() => onClickNations('Netherlands')} type = "button" id = "B4" value = "네덜란드" name = "Group">
-                        <img width="30%" src="https://cdn.sofifa.net/flags/nl.png" alt="국가 사진"/>
-                        <p>네덜란드</p>
+                        <button onClick={() => onClickNations('Wales')} type = "button" id = "B4" value = "웨일스" name = "Group">
+                        <img width="30%" src="https://cdn.sofifa.net/flags/gb-wls.png" alt="국가 사진"/>
+                        <p>웨일스</p>
                         </button>
                         </div>  
                     </div>
@@ -313,9 +395,9 @@ function App(props) {
                             </button> 
                         </div>
                         <div className='group_infoD2'>                              
-                            <button onClick={() => onClickNations('Iran')} type = "button" id = "D2" value = "이란" name = "Group">
-                                <img width="30%" src="https://cdn.sofifa.net/flags/ec.png" alt="국가 사진"/>
-                                <p>이란</p>
+                            <button onClick={() => onClickNations('Australia')} type = "button" id = "D2" value = "호주" name = "Group">
+                                <img width="30%" src="https://cdn.sofifa.net/flags/au.png" alt="국가 사진"/>
+                                <p>호주</p>
                             </button>
                         </div>
                         <div className='group_infoD3'> 
@@ -345,9 +427,9 @@ function App(props) {
                             </button>
                         </div>
                         <div className='group_infoE2'>                              
-                            <button onClick={() => onClickNations('Iran')}type = "button" id = "E2" value = "이란" name = "Group">
-                                <img width="30%" src="https://cdn.sofifa.net/flags/ec.png" alt="국가 사진"/>
-                                <p>이란</p>
+                            <button onClick={() => onClickNations('Costa Rica')}type = "button" id = "E2" value = "코스타리카" name = "Group">
+                                <img width="30%" src="https://cdn.sofifa.net/flags/cr.png" alt="국가 사진"/>
+                                <p>코스타리카</p>
                             </button>
                         </div>
                         <div className='group_infoE3'> 
@@ -375,7 +457,7 @@ function App(props) {
                                 </button>
                             </div>
                         <div className='group_infoF2'>                              
-                            <button onClick={() => onClickNations('Spain')} type = "button" id = "F2" value = "캐나다" name = "Group">
+                            <button onClick={() => onClickNations('Canada')} type = "button" id = "F2" value = "캐나다" name = "Group">
                                 <img width="30%" src="https://cdn.sofifa.net/flags/ca.png" alt="국가 사진"/>
                                 <p>캐나다</p>
                             </button>
@@ -464,12 +546,13 @@ function App(props) {
 
         <div className='RIGHT'>
             <div className='div_right'>
+                {nations.length == 0 ? <h1>국가를 선택해주세요!</h1>:<></>}
             {nations.length > 0 ? <>
                 <div className="div_right_top">
                         <TopFlag nationality_name={nations[0]} data={dataset} mapping={nationMapping} ranking={fifaRankData} overall_mean={overallMeanData}/>
                     {/* <div className="div_right_top_right"> */}
                         {/* <NationAbilityTopChart nation_index={0} /> */}
-                        <NationAbilityTopChart nation_index={0} />
+                        <TopChart nationality_name={nations[0]} data={dataset}/>
                     {/* </div> */}
                 </div>
             
@@ -520,7 +603,8 @@ function App(props) {
             <>
             <div className="div_right_top">
                     <TopFlag nationality_name={nations[1]} data={dataset} mapping={nationMapping} ranking={fifaRankData} overall_mean={overallMeanData}/>
-                    <NationAbilityTopChart nation_index={1} />
+                    {/* <NationAbilityTopChart nation_index={1} /> */}
+                    <TopChart nationality_name={nations[1]} data={dataset}/>
             </div>
             <div className="div_right_bottom">
                 <div className="div_right_bottom_split">
@@ -566,7 +650,6 @@ function App(props) {
             </>:<></>}
             </div>{/*div_right 첫번째 국가  -> 자동 선택되게 만들었습니다~*/}
 
-        
             <div className='grade_overall'>
             {nations.length > 1?<>
             <div className='grade_overall_chart'>
