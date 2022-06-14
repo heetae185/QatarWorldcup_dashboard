@@ -1,0 +1,964 @@
+h1{
+    color: #70193D;
+    text-align: center;
+}
+b{
+    text-align: center;
+}
+.Wrapper{
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+}
+.LEFT{
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+    flex-basis: 35%;
+    background-color: mediumspringgreen;
+}
+#QT{align-items: baseline; border: none; background-color: white; width: 300px; border: 3px solid blue;}
+.RIGHT{
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+    flex-basis: 65%;
+    background-color: cornflowerblue;
+}
+/*좌측 상단*/
+.left_up{
+    display: flex;
+    border: 5px solid #70193D;
+    margin: 20px;
+    padding: 20px;
+    max-height: fit-content;
+    height: fit-content;
+    border-radius: 20px;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.LeftTop1{
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+    align-content: space-around;
+    margin: 10px;
+}
+
+.flag{
+    flex-basis: 50%;
+    border: 3px solid #70193D;
+}
+
+#flag{
+    width: 100%;
+    height: 100%;
+}
+
+.Rank{
+    flex-basis: 50%;
+    border: 3px solid #70193D;
+    text-align: center;
+    margin-top: 10px;
+}
+#Rank{
+    border-bottom: 2px solid #70193D;
+    text-align: center;
+    color: black;
+}
+
+.LeftTop2{
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+    align-content: space-around;
+    margin: 10px;
+}
+
+.Nat_name{
+    flex-basis: 50%;
+    border: 3px solid #70193D;
+}
+#Nat_name{
+    text-align: center;
+    color: black;
+}
+
+.Pred_rank{
+    flex-basis: 50%;
+    border: 3px solid #70193D;
+    text-align: center;
+    margin-top: 10px;
+   
+}
+#Pred_rank{
+    border-bottom: 2px solid #70193D;
+    text-align: center;
+    color: black;
+}
+
+/*좌측 하단*/
+.left_down{
+    border: 5px solid #70193D;
+    margin: 20px;
+    padding: 20px;
+    max-height:fit-content;
+    height: fit-content;
+    border-radius: 20px;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+}
+
+#group1{border-bottom: 2px solid #70193D;}
+#group2{border-bottom: 2px solid #70193D;}
+#group3{border-bottom: 2px solid #70193D;}
+#group4{border-bottom: 2px solid #70193D;}
+#group5{border-bottom: 2px solid #70193D;}
+#group6{border-bottom: 2px solid #70193D;}
+#group7{border-bottom: 2px solid #70193D;}
+#group8{border-bottom: 2px solid #70193D;}
+
+.LeftBottom1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.Btns{
+    margin-left: auto;
+    flex-direction: column;
+}
+/*Nats*/
+.LeftBottom2{
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+}
+.group_infos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.box1{
+    border: 3px solid #70193D;
+    margin: 5px;
+    text-align: center;
+    flex-basis: 50%;
+    height: fit-content;
+}
+.group_infoA1{
+    flex-direction: row;
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+}
+.group_infoA1 img{
+    flex-basis: 50%;
+
+}
+.group_infoA1 p{
+    flex-basis: 50%;
+}
+
+.group_infoA2{
+    flex-direction: row;
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+}
+.group_infoA2 img{
+    flex-basis: 50%;
+}
+.group_infoA2 p{
+    flex-basis: 50%;
+}
+
+.group_infoA3{
+    flex-direction: row;
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+}
+.group_infoA3 img{
+    flex-basis: 50%;
+}
+.group_infoA3 p{
+    flex-basis: 50%;
+}
+
+.group_infoA4{
+    flex-direction: row;
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+}
+.group_infoA4 img{
+    flex-basis: 50%;
+}
+.group_infoA4 p{
+    flex-basis: 50%;
+}
+
+/*GroupB*/
+.box2{
+    border: 3px solid #70193D;
+    margin: 5px;
+    text-align: center;
+    flex-basis: 50%;
+    height: fit-content;
+}
+.group_infoB1{
+    flex-direction: row;
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+}
+.group_infoB1 img{
+    flex-basis: 50%;
+
+}
+.group_infoB1 p{
+    flex-basis: 50%;
+}
+
+.group_infoB2{
+    flex-direction: row;
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+}
+.group_infoB2 img{
+    flex-basis: 50%;
+}
+.group_infoB2 p{
+    flex-basis: 50%;
+}
+
+.group_infoB3{
+    flex-direction: row;
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+}
+.group_infoB3 img{
+    flex-basis: 50%;
+}
+.group_infoB3 p{
+    flex-basis: 50%;
+}
+.group_infoB4{
+    flex-direction: row;
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+}
+.group_infoB4 img{
+    flex-basis: 50%;
+}
+.group_infoB4 p{
+    flex-basis: 50%;
+}
+
+/*G3*/
+.LeftBottom3{
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+}
+.box3{
+    border: 3px solid #70193D;
+    margin: 5px;
+    text-align: center;
+    flex-basis: 50%;
+    height: fit-content;
+}
+.group_infoC1{
+    flex-direction: row;
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+}
+.group_infoC1 img{
+    flex-basis: 50%;
+}
+.group_infoC1 p{
+    flex-basis: 50%;
+}
+.group_infoC2{
+    flex-direction: row;
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+}
+.group_infoC2 img{
+    flex-basis: 50%;
+}
+.group_infoC2 p{
+    flex-basis: 50%;
+}
+.group_infoC3{
+    flex-direction: row;
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+}
+.group_infoC3 img{
+    flex-basis: 50%;
+}
+.group_infoC3 p{
+    flex-basis: 50%;
+}
+.group_infoC4{
+    flex-direction: row;
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+}
+.group_infoC4 img{
+    flex-basis: 50%;
+}
+.group_infoC4 p{
+    flex-basis: 50%;
+}
+
+/*G4*/
+.box4{
+    border: 3px solid #70193D;
+    margin: 5px;
+    text-align: center;
+    flex-basis: 50%;
+    height: fit-content;
+}
+.group_infoD1{
+    flex-direction: row;
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+}
+.group_infoD1 img{
+    flex-basis: 50%;
+}
+.group_infoD1 p{
+    flex-basis: 50%;
+}
+.group_infoD2{
+    flex-direction: row;
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+}
+.group_infoD2 img{
+    flex-basis: 50%;
+}
+.group_infoD2 p{
+    flex-basis: 50%;
+}
+.group_infoD3{
+    flex-direction: row;
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+}
+.group_infoD3 img{
+    flex-basis: 50%;
+}
+.group_infoD3 p{
+    flex-basis: 50%;
+}
+.group_infoD4{
+    flex-direction: row;
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+}
+.group_infoD4 img{
+    flex-basis: 50%;
+}
+.group_infoD4 p{
+    flex-basis: 50%;
+}
+
+/*G5*/
+.LeftBottom4{
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+}
+.box5{
+    border: 3px solid #70193D;
+    margin: 5px;
+    text-align: center;
+    flex-basis: 50%;
+    height: fit-content;
+}
+.group_infoE1{
+    flex-direction: row;
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+}
+.group_infoE1 img{
+    flex-basis: 50%;
+}
+.group_infoE1 p{
+    flex-basis: 50%;
+}
+.group_infoE2{
+    flex-direction: row;
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+}
+.group_infoE2 img{
+    flex-basis: 50%;
+}
+.group_infoE2 p{
+    flex-basis: 50%;
+}
+.group_infoE3{
+    flex-direction: row;
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+}
+.group_infoE3 img{
+    flex-basis: 50%;
+}
+.group_infoE3 p{
+    flex-basis: 50%;
+}
+.group_infoE4{
+    flex-direction: row;
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+}
+.group_infoE4 img{
+    flex-basis: 50%;
+}
+.group_infoE4 p{
+    flex-basis: 50%;
+}
+
+/*GF*/
+.box6{
+    border: 3px solid #70193D;
+    margin: 5px;
+    text-align: center;
+    flex-basis: 50%;
+    height: fit-content;
+}
+.group_infoF1{
+    flex-direction: row;
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+}
+.group_infoF1 img{
+    flex-basis: 50%;
+}
+.group_infoF1 p{
+    flex-basis: 50%;
+}
+.group_infoF2{
+    flex-direction: row;
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+}
+.group_infoF2 img{
+    flex-basis: 50%;
+}
+.group_infoF2 p{
+    flex-basis: 50%;
+}
+.group_infoF3{
+    flex-direction: row;
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+}
+.group_infoF3 img{
+    flex-basis: 50%;
+}
+.group_infoF3 p{
+    flex-basis: 50%;
+}
+.group_infoF4{
+    flex-direction: row;
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+}
+.group_infoF4 img{
+    flex-basis: 50%;
+}
+.group_infoF4 p{
+    flex-basis: 50%;
+}
+
+/*GG*/
+.LeftBottom5{
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+}
+.box7{
+    border: 3px solid #70193D;
+    margin: 5px;
+    text-align: center;
+    flex-basis: 50%;
+    height: fit-content;
+}
+.group_infoG1{
+    flex-direction: row;
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+}
+.group_infoG1 img{
+    flex-basis: 50%;
+}
+.group_infoG1 p{
+    flex-basis: 50%;
+}
+.group_infoG2{
+    flex-direction: row;
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+}
+.group_infoG2 img{
+    flex-basis: 50%;
+}
+.group_infoG2 p{
+    flex-basis: 50%;
+}
+.group_infoG3{
+    flex-direction: row;
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+}
+.group_infoG3 img{
+    flex-basis: 50%;
+}
+.group_infoG3 p{
+    flex-basis: 50%;
+}
+.group_infoG4{
+    flex-direction: row;
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+}
+.group_infoG4 img{
+    flex-basis: 50%;
+}
+.group_infoG4 p{
+    flex-basis: 50%;
+}
+
+/*GH*/
+.box8{
+    border: 3px solid #70193D;
+    margin: 5px;
+    text-align: center;
+    flex-basis: 50%;
+    height: fit-content;
+}
+.group_infoH1{
+    flex-direction: row;
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+}
+.group_infoH1 img{
+    flex-basis: 50%;
+}
+.group_infoH1 p{
+    flex-basis: 50%;
+}
+.group_infoH2{
+    flex-direction: row;
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+}
+.group_infoH2 img{
+    flex-basis: 50%;
+}
+.group_infoH2 p{
+    flex-basis: 50%;
+}
+.group_infoH3{
+    flex-direction: row;
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+}
+.group_infoH3 img{
+    flex-basis: 50%;
+}
+.group_infoH3 p{
+    flex-basis: 50%;
+}
+.group_infoH4{
+    flex-direction: row;
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+}
+.group_infoH4 img{
+    flex-basis: 50%;
+}
+.group_infoH4 p{
+    flex-basis: 50%;
+}
+
+/*우측 상단*/
+/*(1)*/
+.right_up{
+    border: 5px solid #70193D;
+    margin: 20px;
+    padding: 20px;
+    max-height: fit-content;
+    height: fit-content;
+    border-radius: 20px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.rightUp1{
+    display: flex;
+    text-align:center;
+    flex-direction: row;
+    align-content: space-around;   
+}
+.Nat_Info{
+    flex-direction: column;
+    align-items:space-between;
+    flex-basis: 25%;
+    border: 3px solid orange;
+}
+.RF{
+    border: 3px solid orangered;  
+    flex:1;
+  
+}
+#RF{width: 100%; height: 100%;}
+
+.Chart1{
+    align-items: stretch;
+    flex-basis: 25%;
+    flex-direction: column;
+}
+.Chart2{
+    flex-direction: column;
+    flex-basis: 25%;
+    align-items: stretch;
+}
+.Chart3{
+    flex-basis: 25%;
+    align-items: stretch;
+    flex-direction: column;
+}
+.divForChart1{
+    border: 3px solid aqua;
+    flex-direction: column;
+}
+.divForChart2{
+    border: 3px solid aqua;
+    flex-direction: column;
+}
+.divForChart3{
+    border: 3px solid aqua;
+    flex-direction: column;
+}
+
+
+.rightUp2{
+    display: flex;
+    justify-content: space-around;  
+    flex-direction: row;
+}
+.Player1{
+    display: flex;
+    align-content: space-between;
+    flex-direction: column;
+    border: 3px solid salmon;
+    flex-basis: 33.3%;
+
+} 
+.Player1_info{
+    border: 3px solid gold;
+    flex-direction: row;
+    display: flex;
+}
+.Player1_img{
+    flex: auto;
+    border: 3px solid aqua;
+
+}
+.Player1_stat{
+    flex: auto;
+    border: 3px solid #70193D;
+}
+
+.Player2{
+    display: flex;
+    align-content: space-between;
+    flex-direction: column;
+    border: 3px solid salmon;
+    flex-basis: 33.3%;
+
+} 
+.Player2_info{
+    border: 3px solid gold;
+    flex-direction: row;
+    display: flex;
+}
+.Player2_img{
+    flex: auto;
+    border: 3px solid aqua;
+
+}
+.Player2_stat{
+    flex: auto;
+    border: 3px solid #70193D;
+}
+
+.Player3{
+    display: flex;
+    align-content: space-between;
+    flex-direction: column;
+    border: 3px solid salmon;
+    flex-basis: 33.3%;
+} 
+.Player3_info{
+    border: 3px solid gold;
+    flex-direction: row;
+    display: flex;
+}
+.Player3_img{
+    flex: auto;
+    border: 3px solid aqua;
+
+}
+.Player3_stat{
+    flex: auto;
+    border: 3px solid #70193D;
+}
+
+/*우측 상단_2개 국가 선택 시*/
+/*(2)*/
+.right_up2{
+    border: 5px solid #70193D;
+    margin: 20px;
+    padding: 20px;
+    max-height: fit-content;
+    height: fit-content;
+    border-radius: 20px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    display: none;
+}
+.rightUp2_1{
+    display: flex;
+    justify-content: space-between;   
+    text-align:center;
+    flex-direction: row;
+}
+.Nat_Info_2{
+    flex-direction: column;
+    align-items: stretch;
+    flex-basis: 22%;
+    border: 3px solid aqua;
+}
+.RF_2{
+    border: 3px solid orange;    
+}
+#RF_2{width: 100%; height: 100%;}
+.Chart2_1{
+    flex-basis: 26%;
+    align-items: stretch;
+    flex-direction: column;
+}
+.Chart2_2{
+    flex-basis: 26%;
+    flex-direction: column;
+    align-items: stretch;
+}
+.Chart2_3{
+    flex-basis: 26%;
+    align-items: stretch;
+    flex-direction: column;
+}
+.divForChart2_1{
+    border: 3px solid aqua;
+    flex-basis: 26%;
+    flex-direction: column;
+}
+.divForChart2_2{
+    border: 3px solid aqua;
+    flex-basis: 26%;
+    flex-direction: column;
+}
+.divForChart2_3{
+    border: 3px solid aqua;
+    flex-basis: 26%;
+    flex-direction: column;
+}
+
+.rightUp2_2{
+    display: flex;
+    justify-content: space-around;  
+    flex-direction: row;
+}
+.Player2_1{
+    display: flex;
+    align-content: space-between;
+    flex-direction: column;
+    border: 3px solid salmon;
+    flex-basis: 33.3%;
+
+} 
+.Player2_1_info{
+    border: 3px solid gold;
+    flex-direction: row;
+    display: flex;
+}
+.Player2_1_img{
+    flex: auto;
+    border: 3px solid aqua;
+
+}
+.Player2_1_stat{
+    flex: auto;
+    border: 3px solid #70193D;
+}
+.Player2_2{
+    display: flex;
+    align-content: space-between;
+    flex-direction: column;
+    border: 3px solid salmon;
+    flex-basis: 33.3%;
+} 
+.Player2_2_info{
+    border: 3px solid gold;
+    flex-direction: row;
+    display: flex;
+}
+.Player2_2_img{
+    flex: auto;
+    border: 3px solid aqua;
+}
+.Player2_2_stat{
+    flex: auto;
+    border: 3px solid #70193D;
+}
+.Player2_3{
+    display: flex;
+    align-content: space-between;
+    flex-direction: column;
+    border: 3px solid salmon;
+    flex-basis: 33.3%;
+} 
+.Player2_3_info{
+    border: 3px solid gold;
+    flex-direction: row;
+    display: flex;
+}
+.Player2_3_img{
+    flex: auto;
+    border: 3px solid aqua;
+}
+.Player2_3_stat{
+    flex: auto;
+    border: 3px solid #70193D;
+}
+/*두 나라 전력 비교*/
+.Compare{
+    border: 5px solid #70193D;
+    margin: 20px;
+    padding: 20px;
+    max-height: fit-content;
+    height: fit-content;
+    border-radius: 20px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    display: none;
+}
+.compare1{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+.Nat1{
+    display: flex;
+    flex-direction: column;
+    border: 4px solid green;
+    flex-basis: 50%;
+}
+.Nat2{
+    display: flex;
+    flex-direction: column;
+    border: 4px solid green;
+    flex-basis: 50%;
+}
+#Nat1{ /*나라 이미지 임시 채움*/
+    border: 4px solid green;
+    width: 100%;
+    height: 100%;
+}
+
+#Nat2{ /*나라 이미지 임시 채움*/
+    border: 4px solid green;
+    width: 100%;
+    height: 100%;
+}
+.compare2{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    flex-basis: 70%;
+    align-content: space-between;
+}
+.cpr_chart1{
+    display: flex;
+    flex-basis: 33.3%;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+.cpr_chart2{
+    display: flex;
+    flex-basis: 33.3%;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+.cpr_chart3{
+    display: flex;
+    flex-basis: 33.3%;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+/*과거 성적*/
+.grade{
+    border: 5px solid #70193D;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+}
+.gradeChart{
+    border: 3px solid lightgreen;
+    width: 100%;
+}
