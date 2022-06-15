@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 // import './top-flag.css'
 
 function TopFlag(props) {
-    // console.log(props)
+    console.log(props)
     if (props.data == null || props.data.length == 0 ) return <></>;
     if (props.mapping == null || props.mapping.length == 0 ) return <></>;
     if (props.ranking == null || props.ranking.length == 0 ) return <></>;
@@ -30,6 +30,7 @@ function TopFlag(props) {
     // console.log(props.ranking[props.ranking.map((v) => v.Team == nationality_name).indexOf(true)])
     fifa_rank = props.ranking[props.ranking.map((v) => v.Team == props.nationality_name).indexOf(true)].FIFA_Ranking;
     overall_mean = parseInt(props.overall_mean[props.overall_mean.map((v) => v.Team == props.nationality_name).indexOf(true)].mean);
+    pred_rank = props.ranking[props.ranking.map((v) => v.Team == props.nationality_name).indexOf(true)].Predicted_Rank;
 
 
     return(

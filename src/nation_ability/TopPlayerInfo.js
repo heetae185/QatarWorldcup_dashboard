@@ -28,7 +28,10 @@ function TopPlayerInfo(props) {
     const age = data.age;
     const height = data.height_cm;
     const weight = data.weight_kg
-    const position = data.club_position;
+    let position = data.player_positions;
+    if (position.indexOf(",") > 0 ) {
+        position = position.split(",")[0]
+    }
     const preferred_foot = data.preferred_foot;
     const value_eur = data.value_eur;
     const wage_eur = data.wage_eur;

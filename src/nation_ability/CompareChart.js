@@ -93,7 +93,7 @@ function CompareChart(props) {
         // color palette = one color per subgroup
         const color = d3.scaleOrdinal()
         .domain(subgroups)
-        .range(['#e41a1c','#377eb8','#4daf4a'])
+        .range(['#70193d','#C14D4D','#4daf4a'])
 
 
         // Show the bars
@@ -129,7 +129,7 @@ function CompareChart(props) {
                 // .attr("x",  e.screenX - e.offsetX + moveXaxis + 100)
                 // .attr("x", e.target.x.animVal.value + 30)
                 // .attr("y", e.target.y.animVal.value)
-                .attr("x", e.x + 35 - 700)
+                .attr("x", e.x + 50 - 700)
                 .attr("y", 60)
                 console.log(e.target.x.animVal.value)
                 console.log(e.target.y.animVal.value)
@@ -164,6 +164,7 @@ function CompareChart(props) {
         .style("margin", "24px")
         .attr("class", "tooltip")
         // .style("fill", "white")
+        // .style("board", "2px")
     }, []);
 
     return (

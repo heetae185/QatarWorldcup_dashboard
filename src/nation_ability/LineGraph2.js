@@ -28,7 +28,7 @@ let start_verti = verti*3/10; // 숫자를 통해 그래프의 세로 조절(천
 let hori_space = (graph_hori - start_hori)/8;
 let verti_space = (graph_verti - start_verti)/7;
 let title_hori = graph_hori/2 + 20;
-let multi_color = "#70193D";
+let multi_color = "#C14D4D";
 let single_color = "#70193D";
 
 
@@ -118,7 +118,7 @@ function Graph(props){
     .remove();
 
     if(props.compare.length > 1){
-      single_color = "#193d70";
+      single_color = "#70193d";
     }
     else single_color = "#70193D";
     const xScale = d3.scaleLinear().domain([0,data.length-1]).range([start_hori,graph_hori]);
