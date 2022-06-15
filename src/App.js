@@ -1,12 +1,4 @@
-import DivRight from './DivRight';
-import LeftBottom from './LeftBottom';
-import LeftTop from './LeftTop';
-import flag from './imgs/Q.jpeg'
-import chart1 from './imgs/chart.png'
-import player from './imgs/player.jpeg'
-import pChart from './imgs/p_chart.png'
-import gradeChart from './imgs/grade.png'
-import cpr_chart from './imgs/chart.png';
+import flag from './imgs/Q.jpg'
 import logo from "./imgs/logo.png"
 
 import './style.css'
@@ -57,6 +49,9 @@ function App(props) {
 
         if (nations.length == 1) {
             setDataset(data.filter((v) => v.nationality_name == nations[0]));
+            console.log(data)
+            console.log(data.filter((v) => v.nationality_name == nations[0]))
+            console.log(nations)
         } else if (nations.length == 2) {
             setDataset([
                 ...data.filter((v) => v.nationality_name == nations[0]),
@@ -135,7 +130,7 @@ function App(props) {
             btn.style.border = "4px solid #701936"  // first
             btn.style.borderRadius = "10%"
         } else {
-            btn.style.border = "4px solid #E69722"  // second
+            btn.style.border = "4px solid #C14D4D"  // second
             btn.style.borderRadius = "10%"
         }
         
@@ -326,9 +321,9 @@ function App(props) {
                     <b><h3 id="group2">그룹B</h3></b>
                     <div className='group_infos'>
                         <div className='group_infoB1'>
-                        <button onClick={() => onClickNations('England')} id = "B1" value = "영국" name = "Group">
+                        <button onClick={() => onClickNations('England')} id = "B1" value = "잉글랜드" name = "Group">
                             <img width="30%" src="https://cdn.sofifa.net/flags/gb-eng.png" alt="국가 사진"/>
-                        <p>영국</p>
+                        <p>잉글랜드</p>
                         </button>
                         </div>
                         <div className='group_infoB2'>   
