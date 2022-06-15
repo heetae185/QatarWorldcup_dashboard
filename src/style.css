@@ -109,7 +109,7 @@ b{
 .group_infoA1 p{
     flex-basis: 60%;
     font-weight: bold;
-    font-size: xx-small;
+    font-size: small;
 }
 
 .group_infoA2{
@@ -134,7 +134,7 @@ b{
 .group_infoA2 p{
     flex-basis: 60%;
     font-weight: bold;
-    font-size: xx-small;
+    font-size: small;
 }
 
 .group_infoA3{
@@ -158,7 +158,7 @@ b{
 .group_infoA3 p{
     flex-basis: 60%;
     font-weight: bold;
-    font-size: xx-small;
+    font-size: small;
 }
 
 .group_infoA4{
@@ -182,7 +182,7 @@ b{
 .group_infoA4 p{
     flex-basis: 60%;
     font-weight: bold;
-    font-size: xx-small;
+    font-size: small;
 }
 
 /*GroupB*/
@@ -214,7 +214,7 @@ b{
 .group_infoB1 p{
     flex-basis: 60%;
     font-weight: bold;
-    font-size: xx-small;
+    font-size: small;
 }
 
 .group_infoB2{
@@ -238,7 +238,7 @@ b{
 .group_infoB2 p{
     flex-basis: 60%;
     font-weight: bold;
-    font-size: xx-small;
+    font-size: small;
 }
 
 .group_infoB3{
@@ -262,7 +262,7 @@ b{
 .group_infoB3 p{
     flex-basis: 60%;
     font-weight: bold;
-    font-size: xx-small;
+    font-size: small;
 }
 
 .group_infoB4{
@@ -286,7 +286,7 @@ b{
 .group_infoB4 p{
     flex-basis: 60%;
     font-weight: bold;
-    font-size: xx-small;
+    font-size: small;
 }
 /*G3*/
 .LeftBottom3{
@@ -322,7 +322,7 @@ b{
 .group_infoC1 p{
     flex-basis: 60%;
     font-weight: bold;
-    font-size: xx-small;
+    font-size: small;
 }
 
 .group_infoC2{
@@ -347,7 +347,7 @@ b{
 .group_infoC2 p{
     font-weight: bold;
     flex-basis: 60%;
-    font-size: xx-small;
+    font-size: small;
 }
 
 .group_infoC3{
@@ -371,7 +371,7 @@ b{
 .group_infoC3 p{
     flex-basis: 60%;
     font-weight: bold;
-    font-size: xx-small;
+    font-size: small;
 }
 
 .group_infoC4{
@@ -395,7 +395,7 @@ b{
 .group_infoC4 p{
     flex-basis: 60%;
     font-weight: bold;
-    font-size: xx-small;
+    font-size: small;
 }
 
 /*G4*/
@@ -427,7 +427,7 @@ b{
 .group_infoD1 p{
     flex-basis: 60%;
     font-weight: bold;
-    font-size: xx-small;
+    font-size: small;
 }
 
 .group_infoD2{
@@ -451,7 +451,7 @@ b{
 .group_infoD2 p{
     flex-basis: 60%;
     font-weight: bold;
-    font-size: xx-small;
+    font-size: small;
 }
 
 .group_infoD3{
@@ -475,7 +475,7 @@ b{
 .group_infoD3 p{
     flex-basis: 60%;
     font-weight: bold;
-    font-size: xx-small;
+    font-size: small;
 }
 
 .group_infoD4{
@@ -499,7 +499,7 @@ b{
 .group_infoD4 p{
     flex-basis: 60%;
     font-weight: bold;
-    font-size: xx-small;
+    font-size: small;
 }
 
 /*G5*/
@@ -536,7 +536,7 @@ b{
 .group_infoE1 p{
     flex-basis: 60%;
     font-weight: bold;
-    font-size: xx-small;
+    font-size: small;
 }
 
 .group_infoE2{
@@ -560,7 +560,7 @@ b{
 .group_infoE2 p{
     flex-basis: 60%;
     font-weight: bold;
-    font-size: xx-small;
+    font-size: small;
 }
 .group_infoE3{
     flex-direction: row;
@@ -583,7 +583,7 @@ b{
 .group_infoE3 p{
     flex-basis: 60%;
     font-weight: bold;
-    font-size: xx-small;
+    font-size: small;
 }
 .group_infoE4{
     flex-direction: row;
@@ -606,7 +606,7 @@ b{
 .group_infoE4 p{
     flex-basis: 60%;
     font-weight: bold;
-    font-size: xx-small;
+    font-size: small;
 }
 
 /*GF*/
@@ -638,7 +638,7 @@ b{
 .group_infoF1 p{
     flex-basis: 60%;
     font-weight: bold;
-    font-size: xx-small;
+    font-size: small;
 }
 .group_infoF2{
     flex-direction: row;
@@ -661,7 +661,7 @@ b{
 .group_infoF2 p{
     flex-basis: 60%;
     font-weight: bold;
-    font-size: xx-small;
+    font-size: small;
 }
 .group_infoF3{
     flex-direction: row;
@@ -684,7 +684,7 @@ b{
 .group_infoF3 p{
     flex-basis: 60%;
     font-weight: bold;
-    font-size: xx-small;
+    font-size: small;
 }
 .group_infoF4{
     flex-direction: row;
@@ -707,7 +707,7 @@ b{
 .group_infoF4 p{
     flex-basis: 60%;
     font-weight: bold;
-    font-size: xx-small;
+    font-size: small;
 }
 /*GG*/
 .LeftBottom5{
@@ -743,7 +743,7 @@ b{
 .group_infoG1 p{
     flex-basis: 60%;
     font-weight: bold;
-    font-size: xx-small;
+    font-size: small;
 }
 .group_infoG2{
     flex-direction: row;
@@ -766,7 +766,7 @@ b{
 .group_infoG2 p{
     flex-basis: 60%;
     font-weight: bold;
-    font-size: xx-small;
+    font-size: small;
 }
 .group_infoG3{
     flex-direction: row;
@@ -789,7 +789,7 @@ b{
 .group_infoG3 p{
     flex-basis: 60%;
     font-weight: bold;
-    font-size: xx-small;
+    font-size: small;
 }
 .group_infoG4{
     flex-direction: row;
@@ -812,7 +812,7 @@ b{
 .group_infoG4 p{
     flex-basis: 60%;
     font-weight: bold;
-    font-size: xx-small;
+    font-size: small;
 }
 
 /*GH*/
@@ -844,7 +844,7 @@ b{
 .group_infoH1 p{
     flex-basis: 60%;
     font-weight: bold;
-    font-size: xx-small;
+    font-size: small;
 }
 .group_infoH2{
     flex-direction: row;
@@ -867,7 +867,7 @@ b{
 .group_infoH2 p{
     flex-basis: 60%;
     font-weight: bold;
-    font-size: xx-small;
+    font-size: small;
 }
 .group_infoH3{
     flex-direction: row;
@@ -890,7 +890,7 @@ b{
 .group_infoH3 p{
     flex-basis: 60%;
     font-weight: bold;
-    font-size: xx-small;
+    font-size: small;
 }
 .group_infoH4{
     flex-direction: row;
@@ -913,7 +913,7 @@ b{
 .group_infoH4 p{
     flex-basis: 60%;
     font-weight: bold;
-    font-size: xx-small;
+    font-size: small;
 }
 /*우측 상단*/
 /*(1)*/
