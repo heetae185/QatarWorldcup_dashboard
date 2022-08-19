@@ -1,2 +1,11 @@
 # QatarWorldcup_dashboard
-Created with CodeSandbox
+
+광운대학교 22-1 정보디자인 프로그래밍 팀 프로젝트 '**카타르 월드컵 대시보드**'
+
+하나의 국가를 선택하여 대표팀의 전력을 막대그래프로 확인, 주요선수의 능력치를 레이더 차트로 확인
+
+두 국가를 선택하여 팀 평균 능력치 비교, 과거 월드컵 역대 성적 꺾은선그래프로 비교
+
+![카타르월드컵대시보드](https://user-images.githubusercontent.com/50399416/185643228-ab9a0883-0ebf-49d3-bddd-ec6c3543cf01.png)
+
+
